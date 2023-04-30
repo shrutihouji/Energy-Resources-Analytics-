@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <title>Energy Analytics</title>
+    <style>
+      body {
+        background-image: url('/static/images/natural-gas.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1 align="center">Energy Resources</h1>
+      {% block content %}{% endblock %}
+    </div>
+
+    <div class="navbar">
+      <div class="subnav">
+        <button class="subnavbtn">Natural Gas Prices <i class="fa fa-caret-down"></i></button>  
+        <div class="subnav-content">
+          <a href="/Dashboard/Resources/Visualizations" style="color:whitesmoke;"> Visualization</a>
+          <a href="/Dashboard/Resources/Forecasting" style="color:whitesmoke;"> |Forecasting ARIMA| </a>
+          <a href="/Dashboard/Resources/Forecasting_LSTM_price" style="color:whitesmoke;"> |Forecasting LSTM|</a>
+        </div>
+      </div> 
+      <div class="subnav">
+        <button class="subnavbtn">Natural Gas Imports and Exports<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="/Dashboard/Resources/Visualizations1" style="color:whitesmoke;"> Visualization</a>
+          <a href="/Dashboard/Resources/Forecasting1" style="color:whitesmoke;"> |Forecasting VAR|</a>
+        </div>
+      </div> 
+
+      <div class="subnav">
+        <button class="subnavbtn">Natural Gas Production<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="/Dashboard/Resources/Visualizations_Production" style="color:whitesmoke;">Visualization</a>
+          <a href="/Dashboard/Resources/Forecasting_Production" style="color:whitesmoke;"> |Forecasting ARIMA|</a>
+          <a href="/Dashboard/Resources/Forecasting_LSTM_prod" style="color:whitesmoke;"> |Forecasting LSTM|</a>
+        </div>
+      </div> 
+
+      <div class="subnav">
+        <button class="subnavbtn">Natural Gas Consumption<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="/Dashboard/Resources/Visualizations_Consumption" style="color:whitesmoke;">Visualization</a>
+          <a href="/Dashboard/Resources/Forecasting_Consumption" style="color:whitesmoke;"> |Forecasting VAR|</a>
+        </div>
+      </div> 
+      
+    <ol>
+      <li><a  href="natural_gas.html" style="color:black;">Natural Gas Prices</a></li>
+      <div class="table-data">
+        {{returnList1 | safe}};
+      
+      <li><a  href="natural_gas.html" style="color:black;">Natural Gas Production</a></li>
+      <div class="table-data">
+      {{returnList2 | safe}};
+
+          <li><a  href="natural_gas.html" style="color:black;">Natural Gas Imports and Exports</a></li>
+      <div class="table-data">
+        {{returnList3 | safe}};
+
+        <li><a  href="natural_gas.html" style="color:black;">Natural Gas Consumption</a></li>
+      <div class="table-data">
+        {{returnList4 | safe}};
+    </div>
+    </ol>
+  </body>
+</html>
