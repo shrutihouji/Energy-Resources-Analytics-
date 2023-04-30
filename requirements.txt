@@ -10,3 +10,4 @@ seaborn==0.12.2
 statsmodels==0.13.5
 tensorflow==2.11.0
 yfinance==0.2.18
+gunicorn==19.0.0
